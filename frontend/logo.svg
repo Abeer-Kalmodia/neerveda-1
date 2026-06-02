@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Primary Gradients -->
+    <linearGradient id="dropGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="60%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.0" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.2" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0284c7" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background Base Circle (Slight Premium Glow) -->
+  <circle cx="256" cy="256" r="240" fill="#0f172a" stroke="#1e293b" stroke-width="6" />
+
+  <!-- Outer Protective/Health Ring (Interlocking with droplet) -->
+  <path d="M 256 50 A 206 206 0 1 0 380 410 L 350 375 A 160 160 0 1 1 256 96 Z" fill="url(#ringGrad)" opacity="0.85" />
+
+  <!-- The Main Water Droplet (Smooth curves, modern shape) -->
+  <path d="M 256 64 
+           C 256 64, 400 240, 400 336 
+           A 144 144 0 0 1 112 336 
+           C 112 240, 256 64, 256 64 Z" 
+        fill="url(#dropGrad)" 
+        filter="url(#dropShadow)" />
+
+  <!-- Inner Sparkle / Light reflection overlay -->
+  <path d="M 256 90 
+           C 256 90, 360 230, 360 320 
+           A 104 104 0 0 1 210 420 
+           C 230 400, 240 370, 240 336
+           C 240 250, 256 90, 256 90 Z" 
+        fill="url(#glowGrad)" />
+
+  <!-- Small Health Plus Emblem in the center (representing health/prevention) -->
+  <g transform="translate(256, 320) scale(0.9)">
+    <circle cx="0" cy="0" r="32" fill="#ffffff" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.15))" />
+    <rect x="-18" y="-6" width="36" height="12" rx="3" fill="#0284c7" />
+    <rect x="-6" y="-18" width="12" height="36" rx="3" fill="#0284c7" />
+  </g>
+
+  <!-- Core Ripples below -->
+  <path d="M 160 380 Q 256 420 352 380" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" opacity="0.5" />
+  <path d="M 190 410 Q 256 440 322 410" fill="none" stroke="#10b981" stroke-width="6" stroke-linecap="round" opacity="0.4" />
+</svg>

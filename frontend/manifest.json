@@ -1,0 +1,19 @@
+{
+  "name": "NeerVeda - Water Safety & Disease Prevention",
+  "short_name": "NeerVeda",
+  "description": "Smart Water Safety Monitoring & Disease Outbreak Prevention System for Rural Communities.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#0284c7",
+  "categories": ["medical", "health", "utilities"],
+  "icons": [
+    {
+      "src": "./logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
