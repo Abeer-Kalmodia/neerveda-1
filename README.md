@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # NeerVeda — Water Wisdom Portal & Epidemic Early Warning System
 
 NeerVeda is a premium, full-stack, community-driven water safety surveillance platform designed to prevent disease outbreaks in rural India (specifically Nagaland and Northeast India). 
@@ -78,6 +77,5 @@ You can log in to the dashboard using these pre-seeded simulation profiles:
   * **Email**: `officer@neerveda.org`
   * **Password**: `Officer@1234`
 =======
-# neerveda-1
-AI &amp; IoT-powered water safety surveillance and epidemic early warning system for rural communities in Northeast India.
->>>>>>> 5ce88ae442f5c9fc32224faf14da5d8bdb797351
+
+
