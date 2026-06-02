@@ -15,6 +15,8 @@ public class WaterQualityData {
     private String deviceId;
     private String status;
     private String date;
+    private String aiRisk;
+    private double aiConfidence;
 
     // Constructors
     public WaterQualityData() {}
@@ -80,4 +82,20 @@ public class WaterQualityData {
 
     public String getDate() { return date; }
     public void setDate(String date) { this.date = date; }
+
+    public String getAiRisk() {
+        return aiRisk;
+    }
+
+    public void setAiRisk(String aiRisk) {
+        this.aiRisk = aiRisk;
+    }
+
+    public double getAiConfidence() {
+        return aiConfidence;
+    }
+
+    public void setAiConfidence(double aiConfidence) {
+        this.aiConfidence = aiConfidence;
+    }
 }

@@ -1,8 +1,10 @@
 package com.neerveda.service;
 
+import com.neerveda.service.AIService;
 import com.google.cloud.firestore.*;
 import com.neerveda.config.FirebaseConfig;
 import com.neerveda.model.Alert;
+import com.neerveda.model.PredictionResponse;
 import com.neerveda.model.SymptomReport;
 import com.neerveda.model.WaterQualityData;
 import org.slf4j.Logger;
@@ -19,6 +21,9 @@ import java.util.stream.Collectors;
 @Service
 public class WaterQualityService {
     private static final Logger logger = LoggerFactory.getLogger(WaterQualityService.class);
+
+    @Autowired
+    private AIService aiService;
 
     @Autowired(required = false)
     private Firestore firestore;
@@ -102,6 +107,20 @@ public class WaterQualityService {
         }
 
         data.setStatus(status);
+
+        PredictionResponse prediction =
+        aiService.predict(
+                data.getPh(),
+                data.getTds(),
+                data.getTurbidity(),
+                data.getTemperature()
+        );
+
+        data.setAiRisk(
+                prediction.getOutbreakRisk());
+
+        data.setAiConfidence(
+                prediction.getConfidence());
 
         // Save
         saveReading(data);
